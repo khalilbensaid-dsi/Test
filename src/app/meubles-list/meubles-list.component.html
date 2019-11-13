@@ -1,0 +1,42 @@
+
+<h1>{{titre}}</h1>
+
+<h1>{{date}}</h1>
+<br>
+<div>
+    <h1>{{meubles[0].libelle }} </h1>
+    <img [src]=" meubles[0].img " style="height:200px;width:200px;margin-right:0">
+    <br>
+    <ul>
+        <li>{{meubles[0].prixTTC }} </li>
+        <li>
+    <input type="checkbox" [checked]="meubles[0].neuf" disabled>
+    <label>Neuf</label></li>
+    
+    <li><button (click)="prixoriginal1()" >Prix Origina</button></li></ul>
+</div>
+<div>
+    <h1>{{meubles[1].libelle }}</h1>
+    <img [src]=" meubles[1].img " style="height:200px;width:200px;margin-right:0">
+    <br>
+    <ul>
+        <li>{{meubles[1].prixTTC }}
+        <li>   
+            <input type="checkbox" [checked]="meubles[1].neuf" disabled>
+            <label>Neuf</label></li> 
+    
+    <li><button (click)="prixoriginal2()">Prix Original</button></li></ul>
+</div>
+<div>
+    <h1>{{meubles[2].libelle }}</h1>
+    <img [src]=" meubles[2].img " style="height:200px;width:200px;margin-right:0">
+    <br>
+    <ul>
+        <li>{{meubles[2].prixTTC }}</li>
+    <li><input type="checkbox" [checked]="meubles[2].neuf" disabled>
+    <label>Neuf</label></li>
+    
+    <li><button (click)="prixoriginal3()">Prix Original</button></li></ul>
+</div>
+
+<p> {{nbneuf()}} de meuble(s) à l'etat Neuf  </p>
